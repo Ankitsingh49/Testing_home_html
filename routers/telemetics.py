@@ -9,8 +9,9 @@ import numpy as np
 
 router = APIRouter()
 
-templates =  Jinja2Templates(directory= "templates\my_thoughts")
+templates =  Jinja2Templates(directory= "templates")
 
 @router.get("/telemetics", response_class=HTMLResponse)
 def test_model(request:Request):
     return templates.TemplateResponse("telemetics.html", {"request":request})
+
