@@ -2,7 +2,7 @@ from fastapi import APIRouter , Depends, Form, Request
 from fastapi import Body , Path , Query , HTTPException
 from routers import models , extra_on_models, real_time, aboutme, sentiment , resources
 
-from routers.my_thoughts import telemetics
+from routers import telemetics
 
 from fastapi import FastAPI, Request
 from fastapi.templating import Jinja2Templates
