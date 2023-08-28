@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel = "stylesheet" type="text/css" media="all"
+          href="{{url_for('static', path ='first_app/css/new_base2.css')}}">
+    <link  rel = "stylesheet" type="text/css" media="all"
+          href="{{url_for('static', path ='first_app/css/new_base.css')}}">
+            
+    <meta charset="UTF-8">
+    <meta name =  "viewport" content="width-device-width, initial-scale=1 , shrink-to-fit-no">
+    <title>BOMBAY BANYAN</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+   
+    <!-- Your custom styles -->
+    <style>
+        .bl__content--title {
+            font-family: 'Open Sans', sans-serif; /* Apply the custom font */
+            font-weight: bold; /* Set font weight if needed */
+            font-size: 24px; /* Set font size if needed */
+            /* Add other styling as needed */
+        }
+    </style>
+</head>
+
+<style>
+ 
+  
+ header {
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from( #f6a12b));
+    color: white;
+}
+.info-box {
+    position: fixed;
+    top: 200px; /* Adjust this value to change the distance from the top */
+    right: 20px; /* Adjust this value to change the distance from the right */
+    background-color: #79c2ec;
+    padding: 10px;
+    border: 1px solid #eee877;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  
+</style>
+
+
+<header aria-label="Site header" class="header" id="header" role="banner">
+  <div class="info-box">
+    <p>Please Try my Login Page, Its connected to MongoDb cloud</p>
+  </div>
+    <div class="layout-container">
+        <div class="row align-center space-between">
+            <div class="header-left row align-center">
+                <div class="logo"> 
+                    <a href="/" title="Home" rel="home"> 
+                        <img src="{{ url_for('static', path='images\My new logo.png') }}"  alt="BOMBAY BANYAN" > 
+                    </a>
+                </div>
+            </div>
+            <div class="header-center row align-center">
+                <h2 class="visually-hidden" id="block-mainnavigation-menu">Main navigation</h2>
+                <ul class="row menu menu--main" role="navigation" aria-label="Site main navigation">
+                    <li class="menu__item"> <a href="/models" id="header--HappinessCard">BRIEF</a>
+                    </li>
+                    <li class="menu__item"> 
+                        <a href="/extra_on_models" id="header--WhatsonBBQN">INDEPTH</a>
+                    </li>
+                    <li class="menu__item"> <a href="/resources" id="header--todaysmenu">MY THOUGHTS</a>
+                    </li>
+                    <li class="menu__item"> 
+                        <a href="/aboutme" id="header--Smiles">ABOUT ME</a>
+                    </li>
+                    <li class="menu__item"> 
+                      <a href="/login" id="header--Smiles">LOG IN</a>
+                    </li>
+                    <li class="menu__item"> 
+                      <a href="/login" id="header--Smiles">Try MongoDB</a>
+                    </li>
+                </ul>
+            
+            </div>
+     
+        </div>
+    </div>
+</header>
+
+
+<main aria-label="Site main content" class="main branch__listing" id="main" role="main">
+    <div class="page--headers">
+        <div class="layout-container header__wrapper"> 
+            <div class="bl__filter--title"> </div>
+            <div class="bl__content--wrapper">
+                <div class="bl__content--title centered-text"> MACHINE LEARNING PROJECTS</div>
+            </div>
+        </div>
+    </div>
+    <div class="layout-container layout--wrapper">
+        <div class="content_wrapper"><div class="region region-content"><div class="views-element-container"><div class="views--branch-listing"><div class="view-content"><div class="views-infinite-scroll-content-wrapper clearfix" id="restaurants-listing"><div class="views-row">
+            <div class="views-field views-field-nothing">
+              <span class="field-content">
+                <div class="l-wrapper">
+                  <div class="l-result">
+                    <div class="l-result__view">
+                      <div class="nearbyOutlets--card">
+                        <div class="nearbyOutlets--card-details">
+                          <div class="nearbyOutlets--card-details--location">
+                            Santander Transactions
+                          </div>
+                          <div class="nearbyOutlets--card-details--address">
+                            is customer going to do transaction?
+                          </div>
+                          <div class="nearbyOutlets--card-details--cta">
+                            <a href="/santander" title="">
+                              TEST
+                            </a>
+                          </div>
+                        </div>
+                        <div class="nearbyOutlets--card-image">
+                          <img src=  "{{ url_for('static', path= 'images\Santander+logo.png') }}"  alt="Restaurant in Sector 5, Nerul">
+                        </div>
+                      </div>
+                    </div> 
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div><div class="views-row">
+            <div class="views-field views-field-nothing">
+              <span class="field-content">
+                <div class="l-wrapper">
+                  <div class="l-result">
+                    <div class="l-result__view">
+                      <div class="nearbyOutlets--card">
+                        <div class="nearbyOutlets--card-details">
+                          <div class="nearbyOutlets--card-details--location">
+                            Real Time Dashboard
+                          </div>
+                          <div class="nearbyOutlets--card-details--address">
+                            Real time dashboard in POWER BI of portfolio distribution with stock price (There will be a delay of 60 minutes on dashboard due to power bi policy for public dashboards updates but on power bi service report is being updated after every 2 minutes from 9:15 AM to 3:30 PM )
+                          </div>
+                          <div class="nearbyOutlets--card-details--cta">
+                            <a href="/real_time" title="">
+                              TEST
+                            </a>
+                          </div>
+                          
+                        </div>
+                        <div class="nearbyOutlets--card-image">
+                          <img src="{{ url_for('static', path= 'images\Power_Bi.png') }}" alt="Restaurant in Sector 11, Belapur">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div><div class="views-row">
+            <div class="views-field views-field-nothing">
+              <span class="field-content">
+                <div class="l-wrapper">
+                  <div class="l-result">
+                    <div class="l-result__view">
+                      <div class="nearbyOutlets--card">
+                        <div class="nearbyOutlets--card-details">
+                          <div class="nearbyOutlets--card-details--location">
+                            Amazon Employee Access
+                          </div>
+                          <div class="nearbyOutlets--card-details--address">
+                            Predict an employee's access needs, given his/her job role
+                          </div>
+                          <div class="nearbyOutlets--card-details--cta">
+                            <a href="/amazon" title="">
+                              TEST
+                            </a>
+                          </div>
+                          
+                        </div>
+                        <div class="nearbyOutlets--card-image">
+                          <img src="/static/images/amazonnew3.png" alt="Restaurant in Atria Mall, Worli">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div><div class="views-row">
+            <div class="views-field views-field-nothing">
+              <span class="field-content">
+                <div class="l-wrapper">
+                  <div class="l-result">
+                    <div class="l-result__view">
+                      <div class="nearbyOutlets--card">
+                        <div class="nearbyOutlets--card-details">
+                          <div class="nearbyOutlets--card-details--location">
+                            Customer Review Analysis Of Product on Amazon 
+                          </div>
+                          <div class="nearbyOutlets--card-details--address">
+                            Getting the crux of review, what customer is complaining about or what he likes about the product?
+                          </div>
+                          <div class="nearbyOutlets--card-details--cta">
+                            <a href="/sentiment" title="">
+                              TEST
+                            </a>
+                          </div>
+                          
+                        </div>
+                        <div class="nearbyOutlets--card-image">
+                          <img src="static\images\Bard.jpg" alt="Restaurant in Kurla, Pheonix">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div><div class="views-row">
+            <div class="views-field views-field-nothing">
+              <span class="field-content">
+                <div class="l-wrapper">
+                  <div class="l-result">
+                    <div class="l-result__view">
+                      <div class="nearbyOutlets--card">
+                        <div class="nearbyOutlets--card-details">
+                          <div class="nearbyOutlets--card-details--location">
+                            Prudential Insurance Risk Prediction 
+                          </div>
+                          <div class="nearbyOutlets--card-details--address">
+                            Predicting the risk level of insurance applicant based on his/her profile
+                          </div>
+                          <div class="nearbyOutlets--card-details--cta">
+                            <a href="/real_time" title="">
+                              TEST
+                            </a>
+                          </div>
+                          
+                          
+                        </div>
+                        <div class="nearbyOutlets--card-image">
+                          <img src="static\images\prudential.png" alt="Restaurant in Omr">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div><div class="views-row">
+            <div class="views-field views-field-nothing">
+              <span class="field-content">
+                <div class="l-wrapper">
+                  <div class="l-result">
+                    <div class="l-result__view">
+                      <div class="nearbyOutlets--card">
+                        <div class="nearbyOutlets--card-details">
+                          <div class="nearbyOutlets--card-details--location">
+                            One Main Financial Marketing Response
+                          </div>
+                          <div class="nearbyOutlets--card-details--address">
+                            Determine whether to send a direct mail piece to a customer?
+                          </div>
+                          <div class="nearbyOutlets--card-details--cta">
+                            <a href="/omf" title="">
+                              TEST
+                            </a>
+                          </div>
+                          
+                        </div>
+                        <div class="nearbyOutlets--card-image">
+                          <img src="static\images\omf.jpeg" alt="Restaurant in Caculo Mall, Panaji">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div><div class="views-row">
+            <div class="views-field views-field-nothing">
+              <span class="field-content">
+                <div class="l-wrapper">
+                  <div class="l-result">
+                    <div class="l-result__view">
+                      <div class="nearbyOutlets--card">
+                        <div class="nearbyOutlets--card-details">
+                          <div class="nearbyOutlets--card-details--location">
+                            A/B Testing Marketing Campaign
+                          </div>
+                          <div class="nearbyOutlets--card-details--address">
+                            Marketing Campaign with experiment and control group for A/B testing
+                          </div>
+                          <div class="nearbyOutlets--card-details--cta">
+                            <a href="/real_time" title="">
+                              TEST
+                            </a>
+                          </div>
+                         
+                        </div>
+                        <div class="nearbyOutlets--card-image">
+                          <img src="static\images\ABtesting.png" alt="Restaurant in T Nagar Bazullah Road">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div><div class="views-row">
+            <div class="views-field views-field-nothing">
+              <span class="field-content">
+                <div class="l-wrapper">
+                  <div class="l-result">
+                    <div class="l-result__view">
+                      <div class="nearbyOutlets--card">
+                        <div class="nearbyOutlets--card-details">
+                          <div class="nearbyOutlets--card-details--location">
+                            OTTO Multi-Objective Recommender System
+                          </div>
+                          <div class="nearbyOutlets--card-details--address">
+                            Building a recommender system based on real-world e-commerce sessions
+                          </div>
+                          <div class="nearbyOutlets--card-details--cta">
+                            <a href="/real_time" title="">
+                              TEST
+                            </a>
+                          </div>  
+                          
+                        </div>
+                        <div class="nearbyOutlets--card-image">
+                          <img src="static\images\otto.png" alt="Restaurant in Vadapalani">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div><div class="views-row">
+            <div class="views-field views-field-nothing">
+              <span class="field-content">
+                <div class="l-wrapper">
+                  <div class="l-result">
+                    <div class="l-result__view">
+                      <div class="nearbyOutlets--card">
+                        <div class="nearbyOutlets--card-details">
+                          <div class="nearbyOutlets--card-details--location">
+                            Avito Context Ad Clicks
+                          </div>
+                          <div class="nearbyOutlets--card-details--address">
+                            Predicting if context ads will earn a user's click
+                          </div>
+                          <div class="nearbyOutlets--card-details--cta">
+                            <a href="/real_time" title="">
+                              TEST
+                            </a>
+                          </div> 
+                          
+                        </div>
+                        <div class="nearbyOutlets--card-image">
+                          <img src="static\images\avito.jpg" alt="Restaurant in Indiranagar">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </span>
+            </div>
+         </div><div class="views-row">
+          <div class="views-field views-field-nothing">
+            <span class="field-content">
+              <div class="l-wrapper">
+                <div class="l-result">
+                  <div class="l-result__view">
+                    <div class="nearbyOutlets--card">
+                      <div class="nearbyOutlets--card-details">
+                        <div class="nearbyOutlets--card-details--location">
+                          Corporación Favorita Store Sales Forecasting
+                        </div>
+                        <div class="nearbyOutlets--card-details--address">
+                          Used machine learning to predict grocery sales
+                        </div>
+                        <div class="nearbyOutlets--card-details--cta">
+                          <a href="/new_project" title="">
+                            TSET
+                          </a>
+                        </div> 
+                      </div>
+                      <div class="nearbyOutlets--card-image">
+                        <img src="static\images\cf.png" alt="New Project Image">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </span>
+          </div>
+        </div><div class="views-row">
+          <div class="views-field views-field-nothing">
+            <span class="field-content">
+              <div class="l-wrapper">
+                <div class="l-result">
+                  <div class="l-result__view">
+                    <div class="nearbyOutlets--card">
+                      <div class="nearbyOutlets--card-details">
+                        <div class="nearbyOutlets--card-details--location">
+                          Home Credit Default Risk
+                        </div>
+                        <div class="nearbyOutlets--card-details--address">
+                          predicting how capable each applicant is of repaying a loan?
+                        </div>
+                        <div class="nearbyOutlets--card-details--cta">
+                          <a href="/new_project" title="">
+                            TEST
+                          </a>
+                        </div> 
+                      </div>
+                      <div class="nearbyOutlets--card-image">
+                        <img src="static\images\home.png" alt="New Project Image">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </span>
+          </div>
+        </div><div class="views-row">
+          <div class="views-field views-field-nothing">
+            <span class="field-content">
+              <div class="l-wrapper">
+                <div class="l-result">
+                  <div class="l-result__view">
+                    <div class="nearbyOutlets--card">
+                      <div class="nearbyOutlets--card-details">
+                        <div class="nearbyOutlets--card-details--location">
+                          American Express - Default Prediction using Pyspark
+                        </div>
+                        <div class="nearbyOutlets--card-details--address">
+                          Predict if a customer will default in the future
+                        </div>
+                        <div class="nearbyOutlets--card-details--cta">
+                          <a href="/new_project" title="">
+                            TEST
+                          </a>
+                        </div> 
+                      </div>
+                      <div class="nearbyOutlets--card-image">
+                        <img src="static\images\amex.png" alt="New Project Image">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </span>
+          </div>
+        </div><div class="views-row">
+          <div class="views-field views-field-nothing">
+            <span class="field-content">
+              <div class="l-wrapper">
+                <div class="l-result">
+                  <div class="l-result__view">
+                    <div class="nearbyOutlets--card">
+                      <div class="nearbyOutlets--card-details">
+                        <div class="nearbyOutlets--card-details--location">
+                          Santander Product Recommendation
+                        </div>
+                        <div class="nearbyOutlets--card-details--address">
+                          Predicting which product existing customers will use next month based on their past behavior and that of similar customers.
+                        </div>
+                        <div class="nearbyOutlets--card-details--cta">
+                          <a href="/new_project" title="">
+                            TEST
+                          </a>
+                        </div> 
+                      </div>
+                      <div class="nearbyOutlets--card-image">
+                        <img src="static\images\Santander+logo.png" alt="New Project Image">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </span>
+          </div>
+        </div><div class="views-row">
+          <div class="views-field views-field-nothing">
+            <span class="field-content">
+              <div class="l-wrapper">
+                <div class="l-result">
+                  <div class="l-result__view">
+                    <div class="nearbyOutlets--card">
+                      <div class="nearbyOutlets--card-details">
+                        <div class="nearbyOutlets--card-details--location">
+                          Bosch Production Line Performance
+                        </div>
+                        <div class="nearbyOutlets--card-details--address">
+                          Using Machine Learning to Reduce manufacturing failures
+                        </div>
+                        <div class="nearbyOutlets--card-details--cta">
+                          <a href="/new_project" title="">
+                            TEST
+                          </a>
+                        </div> 
+                      </div>
+                      <div class="nearbyOutlets--card-image">
+                        <img src="static\images\bosch.png" alt="New Project Image">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </span>
+          </div>
+        </div><div class="views-row">
+          <div class="views-field views-field-nothing">
+            <span class="field-content">
+              <div class="l-wrapper">
+                <div class="l-result">
+                  <div class="l-result__view">
+                    <div class="nearbyOutlets--card">
+                      <div class="nearbyOutlets--card-details">
+                        <div class="nearbyOutlets--card-details--location">
+                          Santander recommended mail notification to customer
+                        </div>
+                        <div class="nearbyOutlets--card-details--address">
+                          Send mails to customer for product based on recommendation made by model, using ChatGPT to write the mail. 
+                        </div>
+                        <div class="nearbyOutlets--card-details--cta">
+                          <a href="/new_project" title="">
+                            Test 
+                          </a>
+                        </div> 
+                      </div>
+                      <div class="nearbyOutlets--card-image">
+                        <img src="static\images\mail.jpg" alt="New Project Image">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </span>
+          </div>
+        </div>
+    </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</main>
+
+        
+<script src="{{url_for('static', path = '/first_app/js/js_new1.js')}}" ></script>
+<script src="{{url_for('static', path = '/first_app/js/js_new2.js')}}" ></script>  
+<script src="{{url_for('static', path = '/first_app/js/js_new3.js')}}" ></script>  
+<script src="{{url_for('static', path = '/first_app/js/js_new4.js')}}" ></script>    
+
+

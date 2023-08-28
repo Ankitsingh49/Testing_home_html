@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='/first_app/css/base.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='/first_app/css/bootstrap.css') }}">
+   
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Brief</title>
+
+    <style>
+        /* Global styles for the body */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Styling for the navigation bar */
+        .navbar {
+            background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f6a12b));
+            color: white;
+        }
+           
+
+        .navbar-brand {
+            font-size: 24px;
+        }
+
+        .navbar-nav .nav-item .nav-link {
+            color: #fff;
+        }
+
+        /* Container styles */
+        .container {
+            margin-top: 70px; /* Adjust this value to create spacing between navbar and content */
+        }
+
+        /* Styling for the permanent paragraph */
+        .permanent-paragraph {
+            background-color: #f0f0f0;
+            padding: 20px;
+            font-size: 18px;
+            line-height: 1.6;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            color: #333;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Center the permanent paragraph */
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Styling for additional boxes */
+        .additional-box {
+            margin-top: 20px;
+            background-color: #f0f0f0;
+            padding: 20px;
+            font-size: 18px;
+            line-height: 1.6;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            color: #333;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+           
+
+        }
+
+        /* Styling for the image */
+        .box-image {
+            flex: 0 0 100px;
+            max-width: 100px;
+            max-height: 100px;
+            margin-right: 20px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-md navbar-dark main-color fixed-top">
+        <a class="navbar-brand" href="#">BOMBAY BANYAN</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Content Section -->
+    <div class="container">
+        <div class="row">
+            <!-- Permanent paragraph column -->
+            <div class="col-md-12">
+                <!-- Permanent paragraph content -->
+                <div class="additional-box">
+                    <img class="box-image" src="{{ url_for('static', path= 'images\Santander+logo.png') }}" alt="Sample Image">
+                    <p>
+                        Santander Group is a Spanish multinational financial services company based in Madrid and Santander in Spain.
+                         Dataset provided by the firm on kaggle was to identify which customers will make a specific 
+                        transaction in the future, irrespective of the amount of money transacted. 
+                        <br><br>
+                        Dataset size was 604 MB in csv format, with 202 columns and 200000 unique rows. By understanding customer behavior, Santander can optimize their marketing efforts, offer personalized deals, and enhance customer retention, helping to engage customers who might be at risk of churn..
+
+                        This approach allows for efficient resource allocation and proactive fraud detection. Moreover, it enables targeted upselling and cross-selling, maximizing revenue per customer.
+                        
+                        Utilizing prediction probabilities Santander can with timely and personalized customer service, fostering loyalty and satisfaction. 
+                        <br><br>
+                        <span style="font-weight: bold;">Link to Kaggle:</span>
+                        <a href="https://www.kaggle.com/competitions/santander-customer-transaction-prediction/data" 
+                           style="color: #007bff; text-decoration: underline;" 
+                           target="_blank" rel="noopener noreferrer">
+                            Santander Customer Transaction Prediction Competition
+                        </a>
+
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- First box with image -->
+            <div class="col-md-12">
+                <div class="additional-box">
+                    <img class="box-image" src="{{ url_for('static', path= 'images\Power_Bi.png') }}" alt="Sample Image">
+                    <p>
+                        Real Time dashboard which displays portfolio distrbution with ratios and current price charts.
+                        <br><br>
+                        ETL process which get the data from yfinance API then cleans the data after that pushes the data into sql server from where
+                        POWER BI fetches the data to bulid the report.
+                        <br><br>
+                        NOTE - There will a delay of 60 min in dashboard updates due to power bi public dashboard updates policy, on power bi service updates are after every 2 minutes from 9:15 AM to 3:30 PM.
+                        <br><br>
+                        <span style="font-weight: bold;">Link to Report:</span>
+                        <a href="https://shorturl.at/ajyKM" 
+                            style="color: #007bff; text-decoration: underline;" 
+                            target="_blank" rel="noopener noreferrer">
+                            Real Time Portfolio Dashboard
+                        </a>
+                    </p>
+                   
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- First box with image -->
+            <div class="col-md-12">
+                <div class="additional-box">
+                    <img class="box-image" src="/static/images/amazonnew3.png" alt="Sample Image">
+                    <p>
+                        Amazon has employees from all industries and a range of backgrounds working in their offices and operations centers around the world. As of 2022, Amazon had 1,541,000 full- and part-time employees worldwide. When an employee at any company starts work, they first need to obtain the computer access necessary to fulfill their role. This access may allow an employee to read/manipulate resources through various applications or web portals. Given the data related to current employees and their provisioned access, models can be built that automatically determine access privileges as employees enter and leave roles within a company. These auto-access models seek to minimize the human involvement required to grant or revoke employee access.
+
+                        <br><br>
+                        Dataset has 9 Features contributing to Predicting Employee access. 
+                        <br><br>
+                        <span style="font-weight: bold;">Link to Kaggle:</span>
+                        <a href="https://www.kaggle.com/competitions/amazon-employee-access-challenge" 
+                            style="color: #007bff; text-decoration: underline;" 
+                            target="_blank" rel="noopener noreferrer">
+                            Amazon Employee Access Challenge
+                        </a>
+                    </p>
+                   
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- First box with image -->
+            <div class="col-md-12">
+                <div class="additional-box">
+                    <img class="box-image" src="static\images\Bard.jpg" alt="Sample Image">
+                    <p>
+                        In this project, I focused on gathering crucial insights from customer reviews of the Samsung M13 phone on Amazon by scraping the website. Utilizing the Google's Bard API, I skillfully summarized and extracted the essential crux of each review, capturing both complaints and praise shared by customers.
+                        <br><br>
+                        With Power BI, engaging and interactive reports are made, presenting the key points of customer feedback in a clear and concise manner. These reports can allow the management to track sentiments and identify areas for product improvement effectively.
+                        <br><br>
+                        Throughout the project, I took utmost care to respect data privacy and adhere to ethical guidelines, ensuring responsible handling of customer information ( no personal information was collected).
+                        <br><br>
+                        <span style="font-weight: bold;">Link to Report:</span>
+                        <a href="https://shorturl.at/loOZ7" 
+                            style="color: #007bff; text-decoration: underline;" 
+                            target="_blank" rel="noopener noreferrer">
+                            Review Report of Samsung M31  
+                        </a>
+                        <br><br>
+                        <span style="font-weight: bold;">Link to Product on Amazon:</span>
+                        <a href="https://shorturl.at/egxJR" 
+                            style="color: #007bff; text-decoration: underline;" 
+                            target="_blank" rel="noopener noreferrer">
+                            Samsung M31  
+                        </a>
+                    </p>
+                   
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- First box with image -->
+            <div class="col-md-12">
+                <div class="additional-box">
+                    <img class="box-image" src="static\images\prudential.png" alt="Sample Image">
+                    <p>
+                        Prudential Life Insurance is a leading global insurance company dedicated to providing financial protection and peace of mind to millions of customers worldwide. With a rich history spanning over a century, Prudential has established itself as a trusted provider of life insurance, retirement, and investment solutions.
+                        <br><br>
+                        Committed to serving its customers' diverse needs, Prudential offers a wide range of insurance products tailored to individual circumstances and goals. Their comprehensive coverage options include term life, whole life, and universal life insurance, along with annuities and investment-linked plans.
+
+                        <br><br>
+                        Dataset provided by the prudential had 128 Features contributing to predict risk level of applicants, there were 8 levels of risk. This approach empowers prudential to make informed decisions, strike a balance in their risk portfolio, and offer competitive products that meet the diverse needs of their customers.
+                        <br><br>
+                        <span style="font-weight: bold;">Link to Kaggle:</span>
+                        <a href="https://www.kaggle.com/competitions/prudential-life-insurance-assessment/data" 
+                            style="color: #007bff; text-decoration: underline;" 
+                            target="_blank" rel="noopener noreferrer">
+                            Prudential Life Insurance Assessment
+                        </a>
+                    </p>
+                   
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- First box with image -->
+            <div class="col-md-12">
+                <div class="additional-box">
+                    <img class="box-image" src="static\images\omf.jpeg" alt="Sample Image">
+                    <p>
+                        OneMain Financial is a prominent financial services company specializing in providing personalized lending solutions to individuals and families. With a history dating back over a century, OneMain has built a reputation as a trusted and customer-focused lender.
+                        <br><br>
+                        Their mission is to help people achieve their financial goals and overcome challenges by offering a range of loan products, including personal loans, auto loans, and debt consolidation loans. OneMain understands that each customer's financial situation is unique, which is why they take a personalized approach to lending, tailoring loan terms and rates to suit individual needs.
+                        <br><br>
+                        Dataset provided by the OneMain financial had 1983 Features contributing to predicting which customers will respond to a direct mail offer. This targeted approach ensures cost efficiency, higher conversion rates, and personalized messaging. By engaging the right audience with relevant offers, One main financial can boost customer retention, gain a competitive advantage, and make data-driven decisions for continuous marketing optimization.
+
+                        <br><br>
+                        <span style="font-weight: bold;">Link to Kaggle:</span>
+                        <a href="https://www.kaggle.com/competitions/springleaf-marketing-response" 
+                            style="color: #007bff; text-decoration: underline;" 
+                            target="_blank" rel="noopener noreferrer">
+                            OneMain Financial Marketing Response
+                        </a>
+                    </p>
+                   
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- First box with image -->
+            <div class="col-md-12">
+                <div class="additional-box">
+                    <img class="box-image" src="static\images\ABtesting.png" alt="Sample Image">
+                    <p>
+                        The main objective of A/B testing is to determine which version performs better by analyzing the response and conversion rates. By randomly assigning users to different groups, marketers can accurately measure the impact of individual elements on customer behavior and make data-backed decisions to enhance marketing effectiveness.
+                        <br><br>
+                        Through A/B testing, marketers can test multiple hypotheses, such as headline variations, color schemes, content layouts, or CTA buttons, to identify the most compelling and persuasive combination. This iterative process helps refine marketing strategies, increase click-through rates, improve conversion rates, and ultimately drive better results.
+                        <br><br>
+                        <span style="font-weight: bold;">Link to Kaggle:</span>
+                        <a href="https://www.kaggle.com/datasets/faviovaz/marketing-ab-testing" 
+                            style="color: #007bff; text-decoration: underline;" 
+                            target="_blank" rel="noopener noreferrer">
+                            A/B Testing for Marketing Campaigns 
+                        </a>
+                    </p>
+                   
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- First box with image -->
+            <div class="col-md-12">
+                <div class="additional-box">
+                    <img class="box-image" src="static\images\otto.png" alt="Sample Image">
+                    <p>
+                        Otto is a leading e-commerce company known for its innovation and customer-centric approach. Founded in Germany, Otto has grown into one of the largest online retailers in Europe, offering a wide range of products across various categories.
+                        <br><br>
+                        With a mission to provide customers with an exceptional shopping experience, Otto emphasizes convenience, quality, and value. The company's extensive product selection includes fashion, electronics, home appliances, furniture, and much more, catering to diverse customer needs.
+                        <br><br>
+                        What sets Otto apart is its commitment to leveraging technology and data analytics to personalize the shopping journey. Through intelligent algorithms, Otto tailors product recommendations and promotions to match individual preferences, making the online shopping experience more engaging and relevant.
+                        <br><br>
+                        By building the multi objective recommender system Otto can improve customer engagement, increased conversions, and enhanced customer loyalty.
+
+                        By offering relevant suggestions and identifying cross-selling opportunities, the system can drive revenue growth and strengthens customer relationships. Its adaptability to changing preferences ensures ongoing user satisfaction and continuous improvement.
+                        
+                        <br><br>
+                        <span style="font-weight: bold;">Link to Kaggle:</span>
+                        <a href="https://www.kaggle.com/competitions/otto-recommender-system/overview" 
+                            style="color: #007bff; text-decoration: underline;" 
+                            target="_blank" rel="noopener noreferrer">
+                            Otto Recommender System 
+                        </a>
+                    </p>
+                   
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- First box with image -->
+            <div class="col-md-12">
+                <div class="additional-box">
+                    <img class="box-image" src="static\images\avito.jpg" alt="Sample Image">
+                    <p>
+                        Avito is a Russian classified advertisements website with sections devoted to general goods for sale, jobs, real estate, personals, cars for sale, and services. Avito is the most popular classifieds site in Russia and is the biggest classifieds site in the world.
+                        <br><br>
+                        In January 2019, it had more than 10.3 million unique daily visitors. On average, Avito's users post more than 500,000 new ads daily and the overall ads are about 60 million active listings.
+
+                        <br><br>
+                        8 relational datasets were provided by Avito, totaling 20 GB of 7-Zip file. Predict if context ads will earn a user's click helping Avito to provide the best user experience possible. By leveraging click-through prediction, Avito can optimize their ad budgets, deliver more relevant ads, and boost conversion rates. Personalized ad targeting becomes possible, enhancing user experiences and driving higher engagement. This capability can lead to more efficient ad campaigns, increased ROI, and sustained business growth.
+                        <br><br>
+                        <span style="font-weight: bold;">Link to Kaggle:</span>
+                        <a href="https://www.kaggle.com/competitions/avito-context-ad-clicks/overview" 
+                            style="color: #007bff; text-decoration: underline;" 
+                            target="_blank" rel="noopener noreferrer">
+                            Avito Context Ad Clicks
+                        </a>
+                    </p>
+                   
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- First box with image -->
+            <div class="col-md-12">
+                <div class="additional-box">
+                    <img class="box-image" src="static\images\cf.png" alt="Sample Image">
+                    <p>
+                        Corporación Favorita, officially known as Corporación Favorita C.A., is a prominent Ecuadorian retail company. It operates one of the largest supermarket chains in Ecuador, offering a wide range of products including groceries, household items, electronics, clothing, and more.
+                        <br><br>
+                        Founded in 1952, Corporación Favorita has grown to become a leading player in the retail industry in Ecuador. The company operates under different store formats, including Supermaxi, Aki, GranAki, Megamaxi, AkiDroguería, among others, catering to diverse customer needs and preferences.
+                         
+                        <br><br>
+                        5 csv files are provided on kaggle to predict the Future sales. By accurately forecasting sales, Corporación Favorita can optimize inventory, allocate resources efficiently, plan promotions strategically, and make informed pricing decisions.
+
+                        This approach streamlines supply chain management, reduces excess inventory, and enhances customer experiences. Sales predictions will also provide a competitive advantage, enabling Corporación Favorita to respond promptly to market changes and stay ahead in a dynamic business environment.
+                        <br><br>
+                        <span style="font-weight: bold;">Link to Kaggle:</span>
+                        <a href="https://www.kaggle.com/competitions/store-sales-time-series-forecasting/overview" 
+                            style="color: #007bff; text-decoration: underline;" 
+                            target="_blank" rel="noopener noreferrer">
+                            Store Sales Time Series Forecasting
+                        </a>
+                    </p>
+                   
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- First box with image -->
+            <div class="col-md-12">
+                <div class="additional-box">
+                    <img class="box-image" src="static\images\home.png" alt="Sample Image">
+                    <p>
+                        Home Credit is a global consumer finance company that provides various financial services to individuals, particularly in the field of consumer lending. Founded in the Czech Republic in 1997, Home Credit has grown into one of the world's leading providers of consumer finance and related services.
+                        <br><br>
+                        The company's primary focus is on providing easy and accessible financing solutions to customers, especially those with limited access to traditional banking services. Home Credit offers a range of financial products, including installment loans, credit cards, cash loans, and point-of-sale (POS) loans, to help customers purchase goods and services.
+
+                        <br><br>
+                        Home credit provided 8 csv files on kaggle totaling 2.7 GB in size, to predict capability of applicant to repay the loan. This process can help assess risk, reduce default rates, and optimize loan terms. Prediction results can ensures a positive customer experience, fosters trust, and builds long-term relationships with borrowers. Compliance with regulations, improved financial performance, and support for financial inclusion are additional benefits of this practice
+                        <br><br>
+                        <span style="font-weight: bold;">Link to Kaggle:</span>
+                        <a href="https://www.kaggle.com/competitions/home-credit-default-risk/overview" 
+                            style="color: #007bff; text-decoration: underline;" 
+                            target="_blank" rel="noopener noreferrer">
+                            Home Credit Default Risk
+                        </a>
+                    </p>
+                   
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- First box with image -->
+            <div class="col-md-12">
+                <div class="additional-box">
+                    <img class="box-image" src="static/images/amex.png" alt="Sample Image">
+                    <p>
+                        American Express, commonly known as Amex, is a multinational financial services corporation based in the United States. Founded in 1850, it is one of the leading global providers of credit cards, charge cards, traveler's checks, and other financial products and services.
+                        <br><br>
+                        As a credit card issuer, American Express operates a variety of card products catering to different customer segments, including individuals, small businesses, and corporate clients. The company offers a range of benefits, rewards, and exclusive perks to its cardmembers, such as cashback, travel rewards, airport lounge access, and concierge services.
+                        <br><br>
+                        In addition to credit cards, American Express provides various financial services, including merchant services, foreign exchange, and insurance products. The company operates a global network that enables card acceptance in numerous countries worldwide.
+
+                        <br><br>
+                        Dataset provided by American Express on kaggle is of size 50 GB, to predict the probability of a customer defaulting on their credit card payments. This information can help American Express in assessing credit risk, setting appropriate credit limits, and determining interest rates. It aids in developing targeted collection strategies, improving fraud detection, and complying with regulatory requirements.
+
+                        It can make informed pricing decisions, allocate capital efficiently, and manage their credit card portfolios effectively. This proactive approach enhances the Amex's financial performance, safeguards against potential losses, and fosters better customer experiences.
+                        <br><br>
+                        <span style="font-weight: bold;">Link to Kaggle:</span>
+                        <a href="https://www.kaggle.com/competitions/amex-default-prediction/overview" 
+                            style="color: #007bff; text-decoration: underline;" 
+                            target="_blank" rel="noopener noreferrer">
+                            Amex Default Prediction
+                        </a>
+                    </p>
+                   
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- First box with image -->
+            <div class="col-md-12">
+                <div class="additional-box">
+                    <img class="box-image" src="static\images\Santander+logo.png" alt="Sample Image">
+                    <p>
+                        Santander is a major international bank with its roots in Spain. It is one of the largest banking groups in Europe and ranks among the world's top financial institutions. Santander was founded in 1857 in the Spanish town of Santander, from which it derives its name.
+                        <br><br>
+                        Over the years, Santander has grown into a global banking giant, providing a wide range of financial services to individuals, businesses, and corporations. The bank offers various products, including savings and checking accounts, loans, mortgages, credit cards, investment services, and insurance.
+
+                        <br><br>
+                        Datset provided by Santander was for recommending product to customers based on other cutomers who have purchased similar product. These targeted recommendations can lead to higher customer engagement and satisfaction. Customers appreciate the convenience of receiving relevant offers without searching extensively for products.
+
+                        Personalized product recommendations can also drive increased sales and revenue. By identifying cross-selling and upselling opportunities, banks can maximize customer lifetime value and boost their bottom line.
+
+                        Moreover, the data-driven marketing approach optimizes marketing efforts, ensuring impactful campaigns and reducing ad spend wastage. 
+                        <br><br>
+                        <span style="font-weight: bold;">Link to Kaggle:</span>
+                        <a href="https://www.kaggle.com/competitions/santander-product-recommendation" 
+                            style="color: #007bff; text-decoration: underline;" 
+                            target="_blank" rel="noopener noreferrer">
+                            Santander Product Recommendation
+                        </a>
+                    </p>
+                   
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- First box with image -->
+            <div class="col-md-12">
+                <div class="additional-box">
+                    <img class="box-image" src="static\images\bosch.png" alt="Sample Image">
+                    <p>
+                        "Bosch," a well-known multinational engineering and technology company. Bosch is headquartered in Germany and operates in various industries, including automotive technology, industrial technology, consumer goods, and energy and building technology.
+
+                        The company was founded in 1886 and has since become a global leader in various sectors, particularly in automotive technology. Bosch is a major supplier of automotive components, such as fuel injection systems, electrical systems, and safety systems, to many automobile manufacturers worldwide.
+                        
+                        In addition to its automotive division, Bosch also provides a wide range of products and solutions for industrial applications, home appliances, power tools, and security systems, among others.
+
+                        <br><br>
+                        Dataset provided by Bosch on kaggle was to predict internal failures using thousands of measurements and tests made for each component along the assembly line. By identifying potential defects early in the assembly line, Bosch can improve product quality, reduce downtime, and optimize inventory management. This data-driven approach enhances safety, fosters continuous improvement, and ensures customer satisfaction. This approach provides a competitive edge, positioning the company as a leader in delivering reliable and high-quality products to the market. 
+                        <br><br>
+                        <span style="font-weight: bold;">Link to Kaggle:</span>
+                        <a href="https://www.kaggle.com/competitions/bosch-production-line-performance/data" 
+                            style="color: #007bff; text-decoration: underline;" 
+                            target="_blank" rel="noopener noreferrer">
+                            Bosch Production Line Performance
+                        </a>
+                    </p>
+                   
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- First box with image -->
+            <div class="col-md-12">
+                <div class="additional-box">
+                    <img class="box-image" src="static\images\mail.jpg" alt="Sample Image">
+                    <p>
+                        Sending mail to potential customer for product recommended by the model. using chatgpt api to generate the mail content.
+
+                        <br><br>
+                        <span style="font-weight: bold;">Link to Mail:</span>
+                        <a href="https://www.kaggle.com/competitions/amazon-employee-access-challenge" 
+                            style="color: #007bff; text-decoration: underline;" 
+                            target="_blank" rel="noopener noreferrer">
+                            EDA of Amazon 
+                        </a>
+                    </p>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional: Your additional JavaScript files -->
+    <script src="{{ url_for('static', path='/first_app/js/jquery-slim.js') }}"></script>
+    <script src="{{ url_for('static', path='/first_app/js/popper.js') }}"></script>
+    <script src="{{ url_for('static', path='/first_app/js/bootstrap.js') }}"></script>
+</body>
+</html>

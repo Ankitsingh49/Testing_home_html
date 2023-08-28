@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='/first_app/css/base.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='/first_app/css/bootstrap.css') }}">
+   
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Model Info</title>
+
+    <style>
+        /* Global styles for the body */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Styling for the navigation bar */
+        .navbar {
+            background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f6a12b));
+            color: white;
+        }
+
+        .navbar-brand {
+            font-size: 24px;
+        }
+
+        .navbar-nav .nav-item .nav-link {
+            color: #fff;
+        }
+
+        /* Container styles */
+        .container {
+            margin-top: 70px; /* Adjust this value to create spacing between navbar and content */
+        }
+
+        /* Styling for the permanent paragraph */
+        .permanent-paragraph {
+            background-color: #f0f0f0;
+            padding: 20px;
+            font-size: 18px;
+            line-height: 1.6;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            color: #333;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Center the permanent paragraph */
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Styling for additional boxes */
+        .additional-box {
+            margin-top: 20px;
+            background-color: #f0f0f0;
+            padding: 20px;
+            font-size: 18px;
+            line-height: 1.6;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            color: #333;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+           
+
+        }
+
+        /* Styling for the image */
+        .box-image {
+            flex: 0 0 100px;
+            max-width: 100px;
+            max-height: 100px;
+            margin-right: 20px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-md navbar-dark main-color fixed-top">
+        <a class="navbar-brand" href="#">BOMBAY BANYAN</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Content Section -->
+    <div class="container">
+        <div class="row">
+            <!-- Permanent paragraph column -->
+            <div class="col-md-12">
+                <!-- Permanent paragraph content -->
+                <div class="additional-box">
+                    <img class="box-image" src="{{ url_for('static', path= 'images\Santander+logo.png') }}" alt="Sample Image">
+                    <p>
+                        Dataset provided by Santander had dimension of (200000,202).It was a binary dataset where we have predict will customer make the 
+                        Transaction (0 for customer will not make the transcation, 1 for transcation will happen).Evaluation metric was area under the ROC curve between the predicted probability and the observed target.
+                        For the metrics in the dataset no specfic information was provided columns were named as VAR_1, VAR_2 so on.    
+                        <br><br>
+                        Standard scalar was applied which improved the model performace by 0.2 (AUC of ROC curve) irrespective
+                        of model used. EDA was done using libraries like Matplotlib, seaborn. 
+                        <br><br>
+                        <span style="font-weight: bold;">Link to EDA Notebook:</span>
+                        <a href="https://www.kaggle.com/code/czarpluto/eda-before-modeling" 
+                           style="color: #007bff; text-decoration: underline;" 
+                           target="_blank" rel="noopener noreferrer">
+                           EDA on Santander Customer Transactions 
+                        </a>
+                        <br><br>
+                        For the modeling diffrent algorithems were consider like Naive Bayes, Lightgbm, XGboost, Logestic Regression, Random Forest
+                        <br><br> 
+                        Area under ROC curve for Naive Bayes is -  0.88762 
+                        <br><br> 
+                        <span style="font-weight: bold;">Link to Naive Bayes Notebook:</span>
+                        <a href="https://www.kaggle.com/code/czarpluto/simple-naive-bayes" 
+                           style="color: #007bff; text-decoration: underline;" 
+                           target="_blank" rel="noopener noreferrer">
+                           Naive Bayes on Santander Customer Transactions
+                        </a>
+                        <br><br>
+                        Area under ROC curve for Lightgbm is - 0.89076
+                        <br><br> 
+                        <span style="font-weight: bold;">Link to Lightgbm Notebook:</span>
+                        <a href="https://www.kaggle.com/code/czarpluto/simple-lightgbm" 
+                           style="color: #007bff; text-decoration: underline;" 
+                           target="_blank" rel="noopener noreferrer">
+                           Lightgbm on Santander Customer Transactions
+                        </a>
+                        <br><br>
+                        Area under ROC curve for Lightgbm and Naive bayes with Logestic Regression is - 0.89659
+                        <br><br> 
+                        <span style="font-weight: bold;">Link to Lightgbm + Naive Bayes + logestic Notebook:</span>
+                        <a href="https://www.kaggle.com/code/czarpluto/naive-bayes-lightgbm-with-logistic" 
+                           style="color: #007bff; text-decoration: underline;" 
+                           target="_blank" rel="noopener noreferrer">
+                           Logestic on Santander Customer Transactions
+                        </a>
+                        <br><br> 
+                        Random Forest and XGboost were not giving the good results as compared to the Lightgbm.
+                        <br><br>
+                        This model was deployed using FASTAPI. 
+                        <br><br>
+                        On the basis of probability of the customer making the transaction or not, Specailized offers can be given to the customer. If customer is going to transact then new service can be provided to the customer to bulid trust and increase the customer base. If customer is not going to transact then offers can be given to the customer to make the customer transact.
+
+
+
+
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- First box with image -->
+            <div class="col-md-12">
+                <div class="additional-box">
+                    <img class="box-image" src="/static/images/Power_BI.png" alt="Sample Image">
+                    <p>
+                        Real time Dashboard using Power_BI. Dashboard shows the real time charts of stock price of selected stocks (BlueStar, Mahindra and Mahindra , HDFC bank , Zomato , Reliance , Ambuja) and portfolio performance. 
+                        <br><br>
+                        This Dashboard was devloped using pyhton, sql server and power bi. Python script sends data to sql server as scheduled and power bi pulls data from sql server as needed.
+                        <br><br> 
+                        <span style="font-weight: bold;">Link to Dashboard: </span>
+                        <a href="https://shorturl.at/ajyKM" 
+                           style="color: #007bff; text-decoration: underline;" 
+                           target="_blank" rel="noopener noreferrer">
+                    
+                           Real-Time Portfolio Dashboard
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- First box with image -->
+            <div class="col-md-12">
+                <div class="additional-box">
+                    <img class="box-image" src="/static/images/amazonnew3.png" alt="Sample Image">
+                    <p>
+                        The objective to build a model, learned using historical data, that will determine an employee's access needs, such that manual access transactions (grants and revokes) are minimized as the employee's attributes change over time. The model will take an employee's role information and a resource code and will return whether or not access should be granted. 
+                        <br><br>
+                        Various feature engineering techniques were used on the data. Like frequency encoding, One Hot encoding. Results with both the techniques were encouraging. Smote oversampling method was also used.
+                        <br><br> 
+                        Various M.L algorithems were tried like SVM, Logestic Regression, Naive Bayes, Random Forest, XGboost, Lightgbm. XGboost gave bests result. 
+                        <br><br>
+                        <span style="font-weight: bold;">Link to EDA: </span>
+                        <a href="https://www.kaggle.com/czarpluto/amazon-eda" 
+                           style="color: #007bff; text-decoration: underline;" 
+                           target="_blank" rel="noopener noreferrer">
+                    
+                           EDA of Aamzon resource access 
+                        </a>
+                        <br><br>
+                        <span style="font-weight: bold;">Link to XGboost: </span>
+                        <a href="https://www.kaggle.com/code/czarpluto/xgboost-with-class-balance" 
+                           style="color: #007bff; text-decoration: underline;" 
+                           target="_blank" rel="noopener noreferrer">
+                    
+                           XGboost on Aamzon resource access 
+                        </a>
+                        <br><br> 
+                        The model was able to predict to allow access to employee when actually needed by 91.29%. Saving time and resources of the company. 
+                        <br><br> 
+                        The model was able to predict not to allow access to employee when actually not needed by 67.31%. Saving time and resources of the company.
+                        <br><br> 
+                        This diffrence between the prediction accuracy of diffrerent classes is due to the imbalance in the dataset.
+                        
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- First box with image -->
+            <div class="col-md-12">
+                <div class="additional-box">
+                    <img class="box-image" src="static\images\Bard.jpg" alt="Sample Image">
+                    <p>
+                        Selinium was used to scrap the data from the Amazon website. Data was cleaned and stored in the csv file. Then using Bard api Crux of the data was extracted and stored in the file. 
+                        <br><br>
+                        Using Power BI, dashboard was created and was published on the web. Using this dashboard user can see sentiment of review in just few words of hundreds of reviews.
+                        <br><br>
+                        <span style="font-weight: bold;">Link to Dashboard: </span>
+                        <a href="https://shorturl.at/loOZ7" 
+                           style="color: #007bff; text-decoration: underline;" 
+                           target="_blank" rel="noopener noreferrer">
+                    
+                           Review Sentiment Dashboard 
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- First box with image -->
+            <div class="col-md-12">
+                <div class="additional-box">
+                    <img class="box-image" src="" alt="Sample Image">
+                    <p>
+                        The objective to build a model, learned using historical data, that will determine an employee's access needs, such that manual access transactions (grants and revokes) are minimized as the employee's attributes change over time. The model will take an employee's role information and a resource code and will return whether or not access should be granted. 
+                        <br><br>
+                        Various feature engineering techniques were used on the data. Like frequency encoding, One Hot encoding. Results with both the techniques were encouraging. Smote oversampling method was also used.
+                        <br><br> 
+                        Various M.L algorithems were tried like SVM, Logestic Regression, Naive Bayes, Random Forest, XGboost, Lightgbm. XGboost gave bests result. 
+                        <br><br>
+                        <span style="font-weight: bold;">Link to EDA: </span>
+                        <a href="https://www.kaggle.com/czarpluto/amazon-eda" 
+                           style="color: #007bff; text-decoration: underline;" 
+                           target="_blank" rel="noopener noreferrer">
+                    
+                           EDA of Aamzon resource access 
+                        </a>
+                        <br><br>
+                        <span style="font-weight: bold;">Link to XGboost: </span>
+                        <a href="https://www.kaggle.com/code/czarpluto/xgboost-with-class-balance" 
+                           style="color: #007bff; text-decoration: underline;" 
+                           target="_blank" rel="noopener noreferrer">
+                    
+                           XGboost on Aamzon resource access 
+                        </a>
+                        <br><br> 
+                        The model was able to predict to allow access to employee when actually needed by 91.29%. Saving time and resources of the company. 
+                        <br><br> 
+                        The model was able to predict not to allow access to employee when actually not needed by 67.31%. Saving time and resources of the company.
+                        <br><br> 
+                        This diffrence between the prediction accuracy of diffrerent classes is due to the imbalance in the dataset.
+                        
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- First box with image -->
+            <div class="col-md-12">
+                <div class="additional-box">
+                    <img class="box-image" src="/static/images/amazonnew3.png" alt="Sample Image">
+                    <p>
+                        The objective to build a model, learned using historical data, that will determine an employee's access needs, such that manual access transactions (grants and revokes) are minimized as the employee's attributes change over time. The model will take an employee's role information and a resource code and will return whether or not access should be granted. 
+                        <br><br>
+                        Various feature engineering techniques were used on the data. Like frequency encoding, One Hot encoding. Results with both the techniques were encouraging. Smote oversampling method was also used.
+                        <br><br> 
+                        Various M.L algorithems were tried like SVM, Logestic Regression, Naive Bayes, Random Forest, XGboost, Lightgbm. XGboost gave bests result. 
+                        <br><br>
+                        <span style="font-weight: bold;">Link to EDA: </span>
+                        <a href="https://www.kaggle.com/czarpluto/amazon-eda" 
+                           style="color: #007bff; text-decoration: underline;" 
+                           target="_blank" rel="noopener noreferrer">
+                    
+                           EDA of Aamzon resource access 
+                        </a>
+                        <br><br>
+                        <span style="font-weight: bold;">Link to XGboost: </span>
+                        <a href="https://www.kaggle.com/code/czarpluto/xgboost-with-class-balance" 
+                           style="color: #007bff; text-decoration: underline;" 
+                           target="_blank" rel="noopener noreferrer">
+                    
+                           XGboost on Aamzon resource access 
+                        </a>
+                        <br><br> 
+                        The model was able to predict to allow access to employee when actually needed by 91.29%. Saving time and resources of the company. 
+                        <br><br> 
+                        The model was able to predict not to allow access to employee when actually not needed by 67.31%. Saving time and resources of the company.
+                        <br><br> 
+                        This diffrence between the prediction accuracy of diffrerent classes is due to the imbalance in the dataset.
+                        
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- First box with image -->
+            <div class="col-md-12">
+                <div class="additional-box">
+                    <img class="box-image" src="static\images\omf.jpeg" alt="Sample Image">
+                    <p>
+                        BY using historical data, model predicted whether to send a email to a customer for a personalized loan offer or not. This model was deployed using FASTAPI. 
+                        <br><br>
+                        Various feature engineering techniques were used on the data. Random over sampler method with class weight parameter was also used for a minority class. Model ablity to predict minority class was improved.
+                        <br><br> 
+                        Various M.L algorithems were tried like Logestic Regression, Naive Bayes, Random Forest, XGboost, Lightgbm. Lightgbm gave best result. 
+                        <br><br>
+                        <span style="font-weight: bold;">Link to EDA: </span>
+                        <a href="https://www.kaggle.com/czarpluto/amazon-eda" 
+                           style="color: #007bff; text-decoration: underline;" 
+                           target="_blank" rel="noopener noreferrer">
+                    
+                           EDA of Aamzon resource access 
+                        </a>
+                        <br><br>
+                        <span style="font-weight: bold;">Link to Lightgbm: </span>
+                        <a href="https://www.kaggle.com/code/czarpluto/python-lightgbm" 
+                           style="color: #007bff; text-decoration: underline;" 
+                           target="_blank" rel="noopener noreferrer">
+                    
+                            Lightgbm on One Main Financial
+                        </a>
+                        <br><br> 
+                        The model was able to predict to send email to customer when actually needed by 74%. Making company to send email to customer who are actually interested in the loan offer. Improving the customer experience and engagement with the company.
+                        <br><br> 
+                        For the people who didn't needed the loan offer, model was able to predict them by 76.6% accuracy. Making marketing team to focus on the people who are actually interested in the loan offer.
+                        
+                    
+                        
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- First box with image -->
+            <div class="col-md-12">
+                <div class="additional-box">
+                    <img class="box-image" src="/static/images/amazonnew3.png" alt="Sample Image">
+                    <p>
+                        The objective to build a model, learned using historical data, that will determine an employee's access needs, such that manual access transactions (grants and revokes) are minimized as the employee's attributes change over time. The model will take an employee's role information and a resource code and will return whether or not access should be granted. 
+                        <br><br>
+                        Various feature engineering techniques were used on the data. Like frequency encoding, One Hot encoding. Results with both the techniques were encouraging. Smote oversampling method was also used.
+                        <br><br> 
+                        Various M.L algorithems were tried like SVM, Logestic Regression, Naive Bayes, Random Forest, XGboost, Lightgbm. XGboost gave bests result. 
+                        <br><br>
+                        <span style="font-weight: bold;">Link to EDA: </span>
+                        <a href="https://www.kaggle.com/czarpluto/amazon-eda" 
+                           style="color: #007bff; text-decoration: underline;" 
+                           target="_blank" rel="noopener noreferrer">
+                    
+                           EDA of Aamzon resource access 
+                        </a>
+                        <br><br>
+                        <span style="font-weight: bold;">Link to XGboost: </span>
+                        <a href="https://www.kaggle.com/code/czarpluto/xgboost-with-class-balance" 
+                           style="color: #007bff; text-decoration: underline;" 
+                           target="_blank" rel="noopener noreferrer">
+                    
+                           XGboost on Aamzon resource access 
+                        </a>
+                        <br><br> 
+                        The model was able to predict to allow access to employee when actually needed by 91.29%. Saving time and resources of the company. 
+                        <br><br> 
+                        The model was able to predict not to allow access to employee when actually not needed by 67.31%. Saving time and resources of the company.
+                        <br><br> 
+                        This diffrence between the prediction accuracy of diffrerent classes is due to the imbalance in the dataset.
+                        
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- First box with image -->
+            <div class="col-md-12">
+                <div class="additional-box">
+                    <img class="box-image" src="/static/images/amazonnew3.png" alt="Sample Image">
+                    <p>
+                        The objective to build a model, learned using historical data, that will determine an employee's access needs, such that manual access transactions (grants and revokes) are minimized as the employee's attributes change over time. The model will take an employee's role information and a resource code and will return whether or not access should be granted. 
+                        <br><br>
+                        Various feature engineering techniques were used on the data. Like frequency encoding, One Hot encoding. Results with both the techniques were encouraging. Smote oversampling method was also used.
+                        <br><br> 
+                        Various M.L algorithems were tried like SVM, Logestic Regression, Naive Bayes, Random Forest, XGboost, Lightgbm. XGboost gave bests result. 
+                        <br><br>
+                        <span style="font-weight: bold;">Link to EDA: </span>
+                        <a href="https://www.kaggle.com/czarpluto/amazon-eda" 
+                           style="color: #007bff; text-decoration: underline;" 
+                           target="_blank" rel="noopener noreferrer">
+                    
+                           EDA of Aamzon resource access 
+                        </a>
+                        <br><br>
+                        <span style="font-weight: bold;">Link to XGboost: </span>
+                        <a href="https://www.kaggle.com/code/czarpluto/xgboost-with-class-balance" 
+                           style="color: #007bff; text-decoration: underline;" 
+                           target="_blank" rel="noopener noreferrer">
+                    
+                           XGboost on Aamzon resource access 
+                        </a>
+                        <br><br> 
+                        The model was able to predict to allow access to employee when actually needed by 91.29%. Saving time and resources of the company. 
+                        <br><br> 
+                        The model was able to predict not to allow access to employee when actually not needed by 67.31%. Saving time and resources of the company.
+                        <br><br> 
+                        This diffrence between the prediction accuracy of diffrerent classes is due to the imbalance in the dataset.
+                        
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- First box with image -->
+            <div class="col-md-12">
+                <div class="additional-box">
+                    <img class="box-image" src="/static/images/amazonnew3.png" alt="Sample Image">
+                    <p>
+                        The objective to build a model, learned using historical data, that will determine an employee's access needs, such that manual access transactions (grants and revokes) are minimized as the employee's attributes change over time. The model will take an employee's role information and a resource code and will return whether or not access should be granted. 
+                        <br><br>
+                        Various feature engineering techniques were used on the data. Like frequency encoding, One Hot encoding. Results with both the techniques were encouraging. Smote oversampling method was also used.
+                        <br><br> 
+                        Various M.L algorithems were tried like SVM, Logestic Regression, Naive Bayes, Random Forest, XGboost, Lightgbm. XGboost gave bests result. 
+                        <br><br>
+                        <span style="font-weight: bold;">Link to EDA: </span>
+                        <a href="https://www.kaggle.com/czarpluto/amazon-eda" 
+                           style="color: #007bff; text-decoration: underline;" 
+                           target="_blank" rel="noopener noreferrer">
+                    
+                           EDA of Aamzon resource access 
+                        </a>
+                        <br><br>
+                        <span style="font-weight: bold;">Link to XGboost: </span>
+                        <a href="https://www.kaggle.com/code/czarpluto/xgboost-with-class-balance" 
+                           style="color: #007bff; text-decoration: underline;" 
+                           target="_blank" rel="noopener noreferrer">
+                    
+                           XGboost on Aamzon resource access 
+                        </a>
+                        <br><br> 
+                        The model was able to predict to allow access to employee when actually needed by 91.29%. Saving time and resources of the company. 
+                        <br><br> 
+                        The model was able to predict not to allow access to employee when actually not needed by 67.31%. Saving time and resources of the company.
+                        <br><br> 
+                        This diffrence between the prediction accuracy of diffrerent classes is due to the imbalance in the dataset.
+                        
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- First box with image -->
+            <div class="col-md-12">
+                <div class="additional-box">
+                    <img class="box-image" src="/static/images/amazonnew3.png" alt="Sample Image">
+                    <p>
+                        The objective to build a model, learned using historical data, that will determine an employee's access needs, such that manual access transactions (grants and revokes) are minimized as the employee's attributes change over time. The model will take an employee's role information and a resource code and will return whether or not access should be granted. 
+                        <br><br>
+                        Various feature engineering techniques were used on the data. Like frequency encoding, One Hot encoding. Results with both the techniques were encouraging. Smote oversampling method was also used.
+                        <br><br> 
+                        Various M.L algorithems were tried like SVM, Logestic Regression, Naive Bayes, Random Forest, XGboost, Lightgbm. XGboost gave bests result. 
+                        <br><br>
+                        <span style="font-weight: bold;">Link to EDA: </span>
+                        <a href="https://www.kaggle.com/czarpluto/amazon-eda" 
+                           style="color: #007bff; text-decoration: underline;" 
+                           target="_blank" rel="noopener noreferrer">
+                    
+                           EDA of Aamzon resource access 
+                        </a>
+                        <br><br>
+                        <span style="font-weight: bold;">Link to XGboost: </span>
+                        <a href="https://www.kaggle.com/code/czarpluto/xgboost-with-class-balance" 
+                           style="color: #007bff; text-decoration: underline;" 
+                           target="_blank" rel="noopener noreferrer">
+                    
+                           XGboost on Aamzon resource access 
+                        </a>
+                        <br><br> 
+                        The model was able to predict to allow access to employee when actually needed by 91.29%. Saving time and resources of the company. 
+                        <br><br> 
+                        The model was able to predict not to allow access to employee when actually not needed by 67.31%. Saving time and resources of the company.
+                        <br><br> 
+                        This diffrence between the prediction accuracy of diffrerent classes is due to the imbalance in the dataset.
+                        
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- First box with image -->
+            <div class="col-md-12">
+                <div class="additional-box">
+                    <img class="box-image" src="/static/images/amazonnew3.png" alt="Sample Image">
+                    <p>
+                        The objective to build a model, learned using historical data, that will determine an employee's access needs, such that manual access transactions (grants and revokes) are minimized as the employee's attributes change over time. The model will take an employee's role information and a resource code and will return whether or not access should be granted. 
+                        <br><br>
+                        Various feature engineering techniques were used on the data. Like frequency encoding, One Hot encoding. Results with both the techniques were encouraging. Smote oversampling method was also used.
+                        <br><br> 
+                        Various M.L algorithems were tried like SVM, Logestic Regression, Naive Bayes, Random Forest, XGboost, Lightgbm. XGboost gave bests result. 
+                        <br><br>
+                        <span style="font-weight: bold;">Link to EDA: </span>
+                        <a href="https://www.kaggle.com/czarpluto/amazon-eda" 
+                           style="color: #007bff; text-decoration: underline;" 
+                           target="_blank" rel="noopener noreferrer">
+                    
+                           EDA of Aamzon resource access 
+                        </a>
+                        <br><br>
+                        <span style="font-weight: bold;">Link to XGboost: </span>
+                        <a href="https://www.kaggle.com/code/czarpluto/xgboost-with-class-balance" 
+                           style="color: #007bff; text-decoration: underline;" 
+                           target="_blank" rel="noopener noreferrer">
+                    
+                           XGboost on Aamzon resource access 
+                        </a>
+                        <br><br> 
+                        The model was able to predict to allow access to employee when actually needed by 91.29%. Saving time and resources of the company. 
+                        <br><br> 
+                        The model was able to predict not to allow access to employee when actually not needed by 67.31%. Saving time and resources of the company.
+                        <br><br> 
+                        This diffrence between the prediction accuracy of diffrerent classes is due to the imbalance in the dataset.
+                        
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- First box with image -->
+            <div class="col-md-12">
+                <div class="additional-box">
+                    <img class="box-image" src="/static/images/amazonnew3.png" alt="Sample Image">
+                    <p>
+                        The objective to build a model, learned using historical data, that will determine an employee's access needs, such that manual access transactions (grants and revokes) are minimized as the employee's attributes change over time. The model will take an employee's role information and a resource code and will return whether or not access should be granted. 
+                        <br><br>
+                        Various feature engineering techniques were used on the data. Like frequency encoding, One Hot encoding. Results with both the techniques were encouraging. Smote oversampling method was also used.
+                        <br><br> 
+                        Various M.L algorithems were tried like SVM, Logestic Regression, Naive Bayes, Random Forest, XGboost, Lightgbm. XGboost gave bests result. 
+                        <br><br>
+                        <span style="font-weight: bold;">Link to EDA: </span>
+                        <a href="https://www.kaggle.com/czarpluto/amazon-eda" 
+                           style="color: #007bff; text-decoration: underline;" 
+                           target="_blank" rel="noopener noreferrer">
+                    
+                           EDA of Aamzon resource access 
+                        </a>
+                        <br><br>
+                        <span style="font-weight: bold;">Link to XGboost: </span>
+                        <a href="https://www.kaggle.com/code/czarpluto/xgboost-with-class-balance" 
+                           style="color: #007bff; text-decoration: underline;" 
+                           target="_blank" rel="noopener noreferrer">
+                    
+                           XGboost on Aamzon resource access 
+                        </a>
+                        <br><br> 
+                        The model was able to predict to allow access to employee when actually needed by 91.29%. Saving time and resources of the company. 
+                        <br><br> 
+                        The model was able to predict not to allow access to employee when actually not needed by 67.31%. Saving time and resources of the company.
+                        <br><br> 
+                        This diffrence between the prediction accuracy of diffrerent classes is due to the imbalance in the dataset.
+                        
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- First box with image -->
+            <div class="col-md-12">
+                <div class="additional-box">
+                    <img class="box-image" src="/static/images/amazonnew3.png" alt="Sample Image">
+                    <p>
+                        The objective to build a model, learned using historical data, that will determine an employee's access needs, such that manual access transactions (grants and revokes) are minimized as the employee's attributes change over time. The model will take an employee's role information and a resource code and will return whether or not access should be granted. 
+                        <br><br>
+                        Various feature engineering techniques were used on the data. Like frequency encoding, One Hot encoding. Results with both the techniques were encouraging. Smote oversampling method was also used.
+                        <br><br> 
+                        Various M.L algorithems were tried like SVM, Logestic Regression, Naive Bayes, Random Forest, XGboost, Lightgbm. XGboost gave bests result. 
+                        <br><br>
+                        <span style="font-weight: bold;">Link to EDA: </span>
+                        <a href="https://www.kaggle.com/czarpluto/amazon-eda" 
+                           style="color: #007bff; text-decoration: underline;" 
+                           target="_blank" rel="noopener noreferrer">
+                    
+                           EDA of Aamzon resource access 
+                        </a>
+                        <br><br>
+                        <span style="font-weight: bold;">Link to XGboost: </span>
+                        <a href="https://www.kaggle.com/code/czarpluto/xgboost-with-class-balance" 
+                           style="color: #007bff; text-decoration: underline;" 
+                           target="_blank" rel="noopener noreferrer">
+                    
+                           XGboost on Aamzon resource access 
+                        </a>
+                        <br><br> 
+                        The model was able to predict to allow access to employee when actually needed by 91.29%. Saving time and resources of the company. 
+                        <br><br> 
+                        The model was able to predict not to allow access to employee when actually not needed by 67.31%. Saving time and resources of the company.
+                        <br><br> 
+                        This diffrence between the prediction accuracy of diffrerent classes is due to the imbalance in the dataset.
+                        
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional: Your additional JavaScript files -->
+    <script src="{{ url_for('static', path='/first_app/js/jquery-slim.js') }}"></script>
+    <script src="{{ url_for('static', path='/first_app/js/popper.js') }}"></script>
+    <script src="{{ url_for('static', path='/first_app/js/bootstrap.js') }}"></script>
+</body>
+</html>

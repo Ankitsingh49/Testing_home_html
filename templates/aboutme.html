@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>About Me</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Global styles for the body */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Use minimum height to push footer to the bottom */
+            background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#45d9ea), to(rgba(235, 91, 202, 0.85)));
+            
+
+
+        }
+
+        /* Styling for the navigation bar */
+        .navbar {
+            background-color:  -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f6a12b));
+            color: #fff;
+        }
+
+        .navbar-brand {
+            font-size: 24px;
+        }
+
+        .navbar-nav .nav-item .nav-link {
+            color: #fff;
+        }
+
+        /* Container styles */
+        .container {
+            margin-top: 70px; /* Adjust this value to create spacing between navbar and content */
+        }
+
+        /* Styling for the card */
+        .about-card {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .about-card img {
+            border-radius: 50%;
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .about-card h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .about-card p {
+            text-align: justify;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* Styling for the footer */
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color:  -webkit-gradient(linear, 0% 0%, 0% 100%, from(#45d9ea), to(rgba(235, 91, 202, 0.85)));
+            color: #fff;
+            margin-top: auto; /* Push the footer to the bottom */
+        }
+
+        .highlighted-email {
+            background-color: #f0f0f0;
+            padding: 5px;
+            cursor: pointer;
+            user-select: all;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-md navbar-dark main-color fixed-top">
+        <a class="navbar-brand" href="#">BOMBAY BANYAN</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="about-card">
+            <img class="box-image" src="/static/images/ankitnew.png" alt="Sample Image">
+            <h1>About Me</h1>
+            <p>Hello! I'm Ankit Singh, and welcome to my About Me page. I'm a student with a passion for data science and analytics. I enjoy learning new things, especially those related to technology. In my free time, I like listening to music and watching animated movies. My favorite animated movie is Onward.
+
+                I'm excited to share my knowledge and experiences with others, and I'm always looking for new projects to collaborate on. If you have any questions or just want to say hello, feel free to contact me. Thank you for visiting my page!</p>
+            <br><br>
+            <span style="font-weight: bold;">Link to LINKEDIN:</span>
+            <a href="https://www.kaggle.com/code/czarpluto/eda-before-modeling" 
+                style="color: #007bff; text-decoration: underline;" 
+                target="_blank" rel="noopener noreferrer">
+                ANKIT SINGH LINKEDIN 
+            </a>
+            <br><br>
+            <span style="font-weight: bold;">Link to GITHUB:</span>
+            <a href="https://github.com/Ankitsingh49" 
+                style="color: #007bff; text-decoration: underline;" 
+                target="_blank" rel="noopener noreferrer">
+                ANKIT SINGH GITHUB
+            </a>
+            <br><br>
+            <span style="font-weight: bold;">Link to KAGGLE:</span>
+            <a href="https://www.kaggle.com/czarpluto" 
+                style="color: #007bff; text-decoration: underline;" 
+                target="_blank" rel="noopener noreferrer">
+                ANKIT SINGH KAGGLE
+            </a>
+            <br><br>
+            <div class="highlighted-email" onclick="copyEmail()">ankitsingh.1753@gmail.com</div>
+            
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2023 ANKIT SINGH | All rights reserved
+    </footer>
+    <script>
+        function copyEmail() {
+          const emailElement = document.querySelector('.highlighted-email');
+          const textArea = document.createElement('textarea');
+          textArea.value = emailElement.textContent;
+          document.body.appendChild(textArea);
+          textArea.select();
+          document.execCommand('copy');
+          document.body.removeChild(textArea);
+          alert('Email copied to clipboard');
+          
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
