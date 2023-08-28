@@ -13,4 +13,4 @@ templates =  Jinja2Templates(directory= "templates\my_thoughts")
 
 @router.get("/telemetics", response_class=HTMLResponse)
 def test_model(request:Request):
-    return templates.TemplateResponse("telemetics.html", {"request":request})
+    return templates.TemplateResponse(r"my_thoughts\telemetics.html", {"request":request})
